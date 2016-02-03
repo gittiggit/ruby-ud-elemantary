@@ -99,8 +99,48 @@ require "tring.rb"
 # require_relative "tring"
 
 ```
+====================================================================================================================
+                                        Mixin
+
+  01. Mixins give us a wonderfully controlled way of adding functionality to a class
+  02. Ruby doesn’t support multiple inheritance directly. But mixin provides a facility that eliminates the problem
+      of multiple inheritance by adding property of such inheritance to the classes.
+
+  03. Mixin is just a feature in ruby to inherit multiple module in a single class
 
 
+```
+      module A
+        def a1
+          puts "We are in a1 method of Module A"
+        end
 
+        def a2
+          puts "We are in a2 method of Module A"
+        end
+      end
 
+      module B
+        def b1
+          puts "We are in b1 method of Module B"
+        end
 
+        def b2
+          puts "We are in b2 method of Module B"
+        end
+      end
+
+      class Sample
+
+        include A
+        include B
+
+      end
+
+      s = Sample.new
+      s.a1
+      s.a2
+      s.b1
+      s.b2
+
+```
