@@ -1,41 +1,3 @@
-inspect: To show the internal details of an object
-p(123)
-
-P : here P method is a shortcut way to show the internal details of an object
-
-
-=======================================================================================================
-
-** How to get the time and date?
-In ruby there are actually 3 classes(Time, Date, DateTime) that gives us time and date
-
-Also see the google docs
-
-```
-time1 = Time.new   # Gives us the current date and time, and time zone
-
-puts time1
-
-current_time = Time.now  # Gives us the current date and time, and time zone
-puts current_time
-puts time1.class
-puts current_time.class
-
-
-#output
-=begin
-2016-02-05 12:40:05 +0600
-2016-02-05 12:40:05 +0600
-Time
-Time
-=end
-
-```
-
-# Working with Date, DateTime and Time
-
-```
-
 =begin
    Various ways to get time and date
        1. Time class
@@ -120,26 +82,3 @@ DateTime
 
 =end
 
-```
-
-# Format date time
-
-```
-
-time = Time.new(1993, 3,4,5,6,7,"+05:30")
-puts time
-puts time.strftime("Year: %Y\n Month: %m\n Day: %d\n Time: %H:%M:%S %p")
-
-
-##########output###############
-=begin
-1993-03-04 05:06:07 +0530
-Year: 1993
- Month: 03
- Day: 04
- Time: 05:06:07 AM
-=end
-###############################
-
-```
-# See all the format from http://www.tutorialspoint.com/ruby/ruby_date_time.htm
